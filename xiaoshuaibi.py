@@ -3,6 +3,7 @@ from time import sleep
 from pymongo import MongoClient
 import re
 from tqdm import tqdm
+from time import sleep
 
 
 if __name__ == '__main__':
@@ -26,6 +27,7 @@ if __name__ == '__main__':
         co=re.compile('<a class="post-title-link" href=".*?">(.*?)</a>')
         neirong=re.findall(co,req.text)
         #print(lianjie,neirong)
+        sleep(5)
         for i in lianjie:
             p='https://wistbean.github.io'+str(i)
             b={}
